@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我们 - 金雷电机</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1e40af',
+                        secondary: '#3b82f6',
+                        accent: '#f97316',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans SC', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body class="bg-light font-sans">
+    <!-- 导航栏 -->
+    <header class="bg-white shadow-md fixed w-full z-50">
+        <nav class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="index.html" class="text-2xl font-bold text-primary flex items-center">
+                    <i class="fa fa-cog mr-2"></i>
+                    <span>金雷电机</span>
+                </a>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="text-dark hover:text-primary font-medium">首页</a>
+                <a href="about.html" class="text-primary font-medium border-b-2 border-primary">关于我们</a>
+                <a href="products.html" class="text-dark hover:text-primary font-medium">产品展示</a>
+                <a href="contact.html" class="text-dark hover:text-primary font-medium">联系我们</a>
+            </div>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-dark hover:text-primary">
+                    <i class="fa fa-bars text-xl"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- 移动端菜单 -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="container mx-auto px-4 py-3 flex flex-col space-y-3">
+                <a href="index.html" class="text-dark hover:text-primary font-medium py-2">首页</a>
+                <a href="about.html" class="text-primary font-medium py-2 border-l-4 border-primary pl-2">关于我们</a>
+                <a href="products.html" class="text-dark hover:text-primary font-medium py-2">产品展示</a>
+                <a href="contact.html" class="text-dark hover:text-primary font-medium py-2">联系我们</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 面包屑导航 -->
+    <section class="pt-24 pb-6 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-2">
+                <a href="index.html" class="text-gray-600 hover:text-primary">首页</a>
+                <i class="fa fa-angle-right text-gray-400"></i>
+                <span class="text-primary">关于我们</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 公司简介 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h1 class="text-3xl font-bold mb-12 text-center text-dark">关于我们</h1>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://neeko-copilot.bytedance.net/api/text2image?prompt=motor%20manufacturing%20factory%20interior&size=1024x1024"
+                        alt="公司工厂" class="rounded-lg shadow-lg w-full">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-2xl font-bold mb-4 text-dark">公司简介</h2>
+                    <p class="text-gray-600 mb-4">
+                        金雷电机有限公司成立于2005年，是一家专业生产三相普通异步电动机的厂家。公司位于山东省聊城市临清市五里庙工业产业园，占地面积1000平方米，拥有现代化的生产车间和先进的生产设备。</p>
+                    <p class="text-gray-600 mb-4">
+                        公司致力于为客户提供高质量、高效率的电动机产品，产品广泛应用于水泵、风机、压缩机、机床等各种工业设备。公司拥有一支专业的技术团队，不断研发创新，提高产品性能和质量。</p>
+                    <p class="text-gray-600">公司通过了ISO9001质量管理体系认证，产品符合国家相关标准，远销国内外市场。我们坚持"质量第一、客户至上"的经营理念，为客户提供优质的产品和服务。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 发展历程 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-dark">发展历程</h2>
+            <div class="relative">
+                <!-- 时间轴 -->
+                <div class="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gray-200"></div>
+
+                <!-- 2005年 -->
+                <div class="flex flex-col md:flex-row items-center mb-12">
+                    <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2 text-dark">2005年</h3>
+                        <p class="text-gray-600">公司成立，开始生产Y系列三相异步电动机。</p>
+                    </div>
+                    <div
+                        class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold">
+                        1
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 md:ml-12 hidden md:block"></div>
+                </div>
+
+                <!-- 2010年 -->
+                <div class="flex flex-col md:flex-row items-center mb-12">
+                    <div class="md:w-1/2 md:pr-12 md:mr-12 hidden md:block"></div>
+                    <div
+                        class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold">
+                        2
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2 text-dark">2010年</h3>
+                        <p class="text-gray-600">扩大生产规模，引入先进生产设备，提高生产效率。</p>
+                    </div>
+                </div>
+
+                <!-- 2015年 -->
+                <div class="flex flex-col md:flex-row items-center mb-12">
+                    <div class="md:w-1/2 md:pr-12 md:text-right mb-6 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2 text-dark">2015年</h3>
+                        <p class="text-gray-600">研发YE2系列高效率三相异步电动机，能效等级达到国家二级标准。</p>
+                    </div>
+                    <div
+                        class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold">
+                        3
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 md:ml-12 hidden md:block"></div>
+                </div>
+
+                <!-- 2020年 -->
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 md:pr-12 md:mr-12 hidden md:block"></div>
+                    <div
+                        class="hidden md:flex items-center justify-center w-12 h-12 rounded-full bg-primary text-white font-bold">
+                        4
+                    </div>
+                    <div class="md:w-1/2 md:pl-12 mb-6 md:mb-0">
+                        <h3 class="text-xl font-bold mb-2 text-dark">2020年</h3>
+                        <p class="text-gray-600">推出Y3系列三相异步电动机，采用全新设计，结构紧凑，性能优越。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 企业文化 -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-dark">企业文化</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-light p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-lightbulb-o"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">企业使命</h3>
+                    <p class="text-gray-600">为客户提供高质量、高效率的电动机产品，推动工业领域的发展。</p>
+                </div>
+                <div class="bg-light p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-eye"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">企业愿景</h3>
+                    <p class="text-gray-600">成为国内领先、国际知名的电动机生产企业。</p>
+                </div>
+                <div class="bg-light p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-primary text-4xl mb-4">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-dark">核心价值观</h3>
+                    <p class="text-gray-600">质量第一、客户至上、创新发展、诚信经营。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 荣誉资质 -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center text-dark">荣誉资质</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center h-32">
+                    <div class="text-center">
+                        <i class="fa fa-certificate text-4xl text-primary mb-2"></i>
+                        <p class="text-gray-600">ISO9001认证</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center h-32">
+                    <div class="text-center">
+                        <i class="fa fa-star text-4xl text-primary mb-2"></i>
+                        <p class="text-gray-600">优质产品奖</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md flex items-center justify-center h-32">
+                    <div class="text-center">
+                        <i class="fa fa-thumbs-up text-4xl text-primary mb-2"></i>
+                        <p class="text-gray-600">客户满意单位</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">金雷电机</h3>
+                    <p class="text-gray-400">专业生产三相普通异步电动机的厂家，致力于为客户提供高质量、高效率的电机产品。</p>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">快速链接</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white transition duration-300">首页</a>
+                        </li>
+                        <li><a href="about.html" class="text-gray-400 hover:text-white transition duration-300">关于我们</a>
+                        </li>
+                        <li><a href="products.html"
+                                class="text-gray-400 hover:text-white transition duration-300">产品展示</a></li>
+                        <li><a href="contact.html"
+                                class="text-gray-400 hover:text-white transition duration-300">联系我们</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">产品系列</h3>
+                    <ul class="space-y-2">
+                        <li><a href="products.html"
+                                class="text-gray-400 hover:text-white transition duration-300">Y2系列</a></li>
+                        <li><a href="products.html"
+                                class="text-gray-400 hover:text-white transition duration-300">YE2系列</a></li>
+                        <li><a href="products.html"
+                                class="text-gray-400 hover:text-white transition duration-300">Y3系列</a></li>
+                        <li><a href="products.html"
+                                class="text-gray-400 hover:text-white transition duration-300">定制电机</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">联系我们</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fa fa-map-marker mr-2"></i>
+                            <span class="text-gray-400">中国江苏省苏州市工业园区金鸡湖大道123号</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-phone mr-2"></i>
+                            <span class="text-gray-400">0512-12345678</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fa fa-envelope mr-2"></i>
+                            <span class="text-gray-400">info@jinleimotor.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 金雷电机有限公司. 保留所有权利.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
